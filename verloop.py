@@ -1,39 +1,5 @@
-"""
-You have to create an API endpoint, which returns Weather data
-related corresponding to a city name
 
-When a city is passed in the body, the corresponding current weather, latitude and longitude
-are returned in the response. The format in which the response is returned is dictated by the
-`output_format` flag, the options for this flag are “json” or “xml”.
-
-If the output flag is set to json the response from the API should be in json format and if the flag is
-set to xml the response should be in xml format.
-
-
-Response JSON
-{
-“Weather” : “20 C”,
-“Latitude” : “12.9716”,
-“Longitude” : “77.5946”,
-“City” : “Bangalore India”
-}
-
-Response XML:
-<?xml version="1.0" encoding="UTF-8" ?>
-<root>
-<Temperature>24.0</Temperature>
-<City>Bangalore</City>
-<Latitude>12.98</Latitude>
-<Longitude>77.58</Longitude>
-</root>
-
-
-
-You can use this API key to access the API
-`31371bc5c3msh34f399b07961d46p192883jsn2ba7562e3194`
-"""
 import os
-
 from flask import Flask, request, Response, jsonify
 import requests
 import dicttoxml
